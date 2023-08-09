@@ -5,7 +5,7 @@ class Releases(Categories):
     def __init__(self):
         """"""
         super().__init__()
-        self.release_stack = dict()
+        self.release_stack = {}
 
     def get_all_releases(
         self,

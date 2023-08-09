@@ -15,7 +15,7 @@ def fred():
 
 @pytest.fixture
 def returned_ok_params() -> dict:
-    return dict()
+    return {}
 
 
 @pytest.fixture
@@ -41,7 +41,7 @@ def get_all_releases_method_works(
 def test_get_all_releases(
     get_all_releases_method_works: bool,
 ):
-    assert get_all_releases_method_works == True
+    assert get_all_releases_method_works
 
 
 @pytest.fixture
@@ -71,7 +71,7 @@ def get_release_dates_all_releases_method_works(
 def test_get_release_dates_all_releases(
     get_release_dates_all_releases_method_works: bool,
 ):
-    assert get_release_dates_all_releases_method_works == True
+    assert get_release_dates_all_releases_method_works
 
 
 @pytest.fixture
@@ -95,7 +95,7 @@ def get_a_release_method_works(
 def test_get_a_release(
     get_a_release_method_works: bool,
 ):
-    assert get_a_release_method_works == True
+    assert get_a_release_method_works
 
 
 @pytest.fixture
@@ -124,7 +124,7 @@ def get_release_dates_method_works(
 def test_get_release_dates(
     get_release_dates_method_works: bool,
 ):
-    assert get_release_dates_method_works == True
+    assert get_release_dates_method_works
 
 
 @pytest.fixture
@@ -157,7 +157,7 @@ def get_series_on_a_release_method_works(
 def test_get_series_on_a_release(
     get_series_on_a_release_method_works: bool,
 ):
-    assert get_series_on_a_release_method_works == True
+    assert get_series_on_a_release_method_works
 
 
 @pytest.fixture
@@ -181,7 +181,7 @@ def get_sources_for_a_release_method_works(
 def test_get_sources_for_a_release(
     get_sources_for_a_release_method_works: bool,
 ):
-    assert get_sources_for_a_release_method_works == True
+    assert get_sources_for_a_release_method_works
 
 
 @pytest.fixture
@@ -211,7 +211,7 @@ def get_tags_for_a_release_method_works(
 def test_get_tags_for_a_release(
     get_tags_for_a_release_method_works: bool,
 ):
-    assert get_tags_for_a_release_method_works == True
+    assert get_tags_for_a_release_method_works
 
 
 @pytest.fixture
@@ -244,7 +244,7 @@ def get_related_tags_for_release_method_works(
 def test_get_related_tags_for_release(
     get_related_tags_for_release_method_works: bool,
 ):
-    assert get_related_tags_for_release_method_works == True
+    assert get_related_tags_for_release_method_works
 
 
 @pytest.fixture
@@ -271,4 +271,4 @@ def get_release_tables_method_works(
 def test_get_release_tables(
     get_release_tables_method_works: bool,
 ):
-    assert get_release_tables_method_works == True
+    assert get_release_tables_method_works

@@ -38,7 +38,7 @@ class FredBase:
         Return True if api_key_file has been found.
         """
         if not os.path.isfile(api_key_file):
-            e = "Can't find %s on path" % api_key_file
+            e = f"Can't find {api_key_file} on path"
             raise FileNotFoundError(e)
         self.api_key_file = api_key_file
         return True
@@ -60,7 +60,7 @@ class FredBase:
         """
         Indicate whether a FRED_API_KEY environment variable is detected.
         """
-        if "FRED_API_KEY" in os.environ.keys():
+        if "FRED_API_KEY" in os.environ:
             if os.environ["FRED_API_KEY"] is not None:
                 return True
         return False
@@ -112,9 +112,9 @@ class FredBase:
                 "&realtime_end=": self.realtime_end, 
                 }
 
-        for k in optional_params.keys():
-            if k in attribute_map.keys():
-                if optional_params[k] is None:
+        for k, v in optional_params.items():
+            if v is None:
+                if k in attribute_map:
                     if attribute_map[k] is not None:
                         optional_params[k] = attribute_map[k]
             if optional_params[k] is not None:
@@ -135,13 +135,12 @@ class FredBase:
                         str_names = str_names.strip().replace(" ", "+")
                         optional_params[k] = str_names
                     except TypeError:
-                        e = "Cannot add tag_names to FRED query url"
-                        print(e)
+                        print("Cannot add tag_names to FRED query url")
                 try:
                     a_parameter_string = k + str(optional_params[k])
                     new_url_string += a_parameter_string
                 except TypeError:
-                    print(k + " " + optional_params[k] + " cannot be cast to str")
+                    print(f"{k} {optional_params[k]} cannot be cast to str")
         return new_url_string
 
     def _viable_api_key(self) -> str:
@@ -247,5 +246,5 @@ class FredBase:
         try:
             fused_str = use_str.join(strings)
         except TypeError:
-            print("Unable to join strings using %s" % use_str)
+            print(f"Unable to join strings using {use_str}")
         return fused_str

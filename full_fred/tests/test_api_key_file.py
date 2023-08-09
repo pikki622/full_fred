@@ -4,7 +4,7 @@ import os
 from .fred_test_utils import returned_ok
 
 key_file = "example_key.txt"
-test_key_file = True if key_file in os.listdir() else False
+test_key_file = key_file in os.listdir()
 
 
 @pytest.fixture

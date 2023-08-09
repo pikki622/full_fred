@@ -26,17 +26,14 @@ def returned_ok(
     if not isinstance(observed, dict):
         return False
     if expected is not None:
-        for expected_key in expected.keys():
-            if not expected_key in observed.keys():
+        for expected_key, value in expected.items():
+            if expected_key not in observed:
                 return False
-            if expected[expected_key] != observed[expected_key]:
+            if value != observed[expected_key]:
                 return False
     if check_union is None:
         return True
-    for key in check_union:
-        if key in observed.keys():
-            return True
-    return False
+    return any(key in observed for key in check_union)
 
 
 def make_time_string(
@@ -53,6 +50,4 @@ def make_time_string(
 
 
 def api_key_found_in_env() -> bool:
-    if "FRED_API_KEY" not in os.environ.keys():
-        return False
-    return True
+    return "FRED_API_KEY" in os.environ

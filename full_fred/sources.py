@@ -8,7 +8,7 @@ class Sources(Series):
         Bank of Japan, Chicago Board Options Exchange, etc.
         """
         super().__init__()
-        self.source_stack = dict()
+        self.source_stack = {}
 
     def get_all_sources(
         self,

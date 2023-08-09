@@ -10,7 +10,7 @@ class Tags(Sources):
         https://fred.stlouisfed.org/docs/api/fred/
         """
         super().__init__()
-        self.tag_stack = dict()
+        self.tag_stack = {}
 
     def get_all_tags(
         self,

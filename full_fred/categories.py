@@ -6,7 +6,7 @@ class Categories(FredBase):
     def __init__(self):
         """"""
         super().__init__()
-        self.category_stack = dict()
+        self.category_stack = {}
 
     def get_a_category(
         self,
