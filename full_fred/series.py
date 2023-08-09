@@ -13,7 +13,7 @@ class Series(Releases):
         For a pd.DataFrame of a series use get_series_df
         """
         super().__init__()
-        self.series_stack = dict()
+        self.series_stack = {}
 
     def get_a_series(
         self,

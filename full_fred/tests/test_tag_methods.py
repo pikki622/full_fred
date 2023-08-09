@@ -15,7 +15,7 @@ def fred() -> Fred:
 
 @pytest.fixture
 def returned_ok_params() -> dict:
-    return dict()
+    return {}
 
 
 @pytest.fixture
@@ -45,7 +45,7 @@ def get_all_tags_method_works(
 def test_get_all_tags(
     get_all_tags_method_works: bool,
 ):
-    assert get_all_tags_method_works == True
+    assert get_all_tags_method_works
 
 
 @pytest.fixture
@@ -78,7 +78,7 @@ def get_related_tags_for_a_tag_method_works(
 def test_get_related_tags_for_a_tag(
     get_related_tags_for_a_tag_method_works: bool,
 ):
-    assert get_related_tags_for_a_tag_method_works == True
+    assert get_related_tags_for_a_tag_method_works
 
 
 @pytest.fixture
@@ -114,4 +114,4 @@ def get_series_matching_tags_method_works(
 def test_get_series_matching_tags(
     get_series_matching_tags_method_works: bool,
 ):
-    assert get_series_matching_tags_method_works == True
+    assert get_series_matching_tags_method_works

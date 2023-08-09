@@ -15,7 +15,7 @@ def fred() -> Fred:
 
 @pytest.fixture
 def returned_ok_params() -> dict:
-    return dict()
+    return {}
 
 
 @pytest.fixture
@@ -40,7 +40,7 @@ def get_all_sources_method_works(
 def test_get_all_sources(
     get_all_sources_method_works: bool,
 ):
-    assert get_all_sources_method_works == True
+    assert get_all_sources_method_works
 
 
 @pytest.fixture
@@ -62,7 +62,7 @@ def get_a_source_method_works(
 def test_get_a_source(
     get_a_source_method_works: bool,
 ):
-    assert get_a_source_method_works == True
+    assert get_a_source_method_works
 
 
 @pytest.fixture
@@ -89,4 +89,4 @@ def get_releases_for_a_source_method_works(
 def test_get_releases_for_a_source(
     get_releases_for_a_source_method_works: bool,
 ):
-    assert get_releases_for_a_source_method_works == True
+    assert get_releases_for_a_source_method_works

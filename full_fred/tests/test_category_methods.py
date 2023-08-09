@@ -15,7 +15,7 @@ def fred() -> Fred:
 
 @pytest.fixture
 def returned_ok_params() -> dict:
-    return dict()
+    return {}
 
 
 @pytest.fixture
@@ -33,7 +33,7 @@ def get_a_category_method_works(
 def test_get_a_category(
     get_a_category_method_works: bool,
 ):
-    assert get_a_category_method_works == True
+    assert get_a_category_method_works
 
 
 @pytest.fixture
@@ -54,7 +54,7 @@ def get_child_categories_method_works(
 def test_get_child_categories(
     get_child_categories_method_works: bool,
 ):
-    assert get_child_categories_method_works == True
+    assert get_child_categories_method_works
 
 
 @pytest.fixture
@@ -75,7 +75,7 @@ def get_related_categories_method_works(
 def test_get_related_categories(
     get_related_categories_method_works: bool,
 ):
-    assert get_related_categories_method_works == True
+    assert get_related_categories_method_works
 
 
 @pytest.fixture
@@ -108,7 +108,7 @@ def get_series_in_a_category_method_works(
 def test_get_series_in_a_category(
     get_series_in_a_category_method_works: bool,
 ):
-    assert get_series_in_a_category_method_works == True
+    assert get_series_in_a_category_method_works
 
 
 @pytest.fixture
@@ -136,7 +136,7 @@ def get_tags_for_a_category_method_works(
 def test_get_tags_for_a_category(
     get_tags_for_a_category_method_works: bool,
 ):
-    assert get_tags_for_a_category_method_works == True
+    assert get_tags_for_a_category_method_works
 
 
 @pytest.fixture
@@ -168,4 +168,4 @@ def get_related_tags_for_a_category_method_works(
 def test_get_related_tags_for_a_category(
     get_related_tags_for_a_category_method_works: bool,
 ):
-    assert get_related_tags_for_a_category_method_works == True
+    assert get_related_tags_for_a_category_method_works
